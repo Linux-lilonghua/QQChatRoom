@@ -1,0 +1,251 @@
+* {
+padding:0px;/*内边距*/
+margin: 0px;/*外边距*/
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+/* 
+登录界面的布局 
+*/
+.box1 {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: 200px;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    background-color: aqua;
+}
+.box1 .box-login img{
+    border-radius:50%;
+    height: 60px;
+    width: 60px;
+}
+
+
+
+/* 
+主界面的布局 
+*/
+
+.box2 {
+    display: none;
+    /* 居中 */
+    position: relative;
+    margin: auto;
+    margin-top: 150px;
+    height: 500px;
+    width: 900px;
+}
+/* 主界面左边 */
+.box2 .box-left{
+    float: left;
+    display: block;
+    width: 20%;
+    height: 100%;
+    background-color:aquamarine;
+    overflow: auto;  /*设置滚动条*/
+} 
+
+/* 点击后出现边框 */
+.box2 .box-left .mainlist .active{
+    border-style: outset;
+    border-color:dimgray;
+}
+
+/* 个人头像 */
+.box2 .box-left .myavatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+/* 用户列表的他人头像 */
+.box2 .box-left .list .user img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+/* 好友列表的好友头像 */
+.box2 .box-left .friendlist .user img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+/* 主界面右边 */
+.box2 .box-right{
+    float: right;
+    display: block;
+    width: 80%;
+    height: 100%;
+}
+/* 聊天对象 */
+.box-right .maintitle{
+    display: block;
+    height: 5%;
+    text-align: center;
+    background-color: bisque;
+}
+/* 
+聊天内容 
+*/
+.liaotian{
+    display: block;
+    height: 70%; 
+    background-color:aliceblue; 
+    overflow: auto;  /*设置滚动条*/
+}
+/* 新增聊天面板的修饰*/
+.liaotian .maincomment{
+    display: block;  
+}
+
+/* 聊天的工具栏 */
+.box-right .maintool{
+    display: block;
+    height: 5%;
+    background-color:bisque
+}
+/* 聊天的发送 */
+.box-right .mainsend{
+    position: relative;
+    display: block;
+    height: 20%;
+    background-color:hotpink
+}
+.box-right .mainsend #content{
+    display: block;
+    height: 100%;
+    overflow: auto;/*设置滚动条*/
+}
+/*发送按钮*/
+.box-right .mainsend .btnsend{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+/* 
+发送消息的聊天内容
+*/
+/* 他人头像 */
+.message-box .other-message .avatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;/*设置为内联块元素*/
+    }
+/* 他人的名字 */
+.message-box .other-message .nickname{
+    display: block;/*设置为块元素*/
+    /* 渐变 */
+	background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #00FFFF 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
+    -webkit-background-clip: text;/*背景被裁剪到文字*/
+	-webkit-text-fill-color: transparent;/*设置文字的填充颜色*/
+}
+/* 他人的消息 */
+.message-box .other-message .content{
+    display: inline-block;/*设置为内联块元素*/
+    border-style:ridge;
+    border-width:5px;
+    border-color:darkgray;
+    border-radius:10%;
+}
+/*
+我的头像
+*/
+.message-box .my-message .avatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;/*设置为内联块元素*/
+    }
+/* 我的名字 */
+.message-box .my-message .nickname{
+    display: block;/*设置为块元素*/
+    /* 渐变 */
+    background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #00FFFF 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
+    -webkit-background-clip: text;/*背景被裁剪到文字*/
+	-webkit-text-fill-color: transparent;/*设置文字的填充颜色*/
+}
+/* 我的消息 */
+.message-box .my-message .content{
+    display: inline-block;/*设置为内联块元素*/
+    border-style:ridge;
+    border-width:5px;
+    border-color:deepskyblue;
+    border-radius:10%;
+}
+/*自己的消息靠右边*/
+ .message-box .my-message{
+    text-align: right;
+ } 
+
+
+
+ /* 历史记录 */
+ /*
+ 图片的发送,图片记录
+ */
+ .liaotian .history{
+    display: none;
+ }
+ .bubble_cont .tupian{
+    height: 100px;
+    width: 100px;
+ }
+
+
+
+ /* 右键菜单1 */
+ .mainlist .menuadd{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background:yellow;
+    display: none
+}
+/* 右键菜单1 */
+.mainlist .menudel{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background:yellow;
+    display: none
+}
+
+/* 二维码快捷登录功能 */
+.box3{
+display: none;
+text-align: center;
+margin-top: 250px;
+}
+
+/* QQ注册 */
+.box4{
+display: none;
+position: relative;
+margin: auto;
+margin-top: 200px;
+height: 500px;
+width: 500px;
+text-align: center;
+background-color: aqua;
+}
+
+.box-zhuche img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}

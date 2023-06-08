@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <!--the css for jquery.mCustomScrollbar-->
+   <link rel="stylesheet" href="lib/css/jquery.mCustomScrollbar.min.css"/>
+   <!--the css for this plugin-->
+   <link rel="stylesheet" href="lib/css/jquery.emoji.css"/>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--链接外部index.css样式表-->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+
+    <!--大盒子1用来登录的-->
+    <div class="box1">
+        <!--大盒子顶部盒子，登录的提示-->
+        <div class="box-top">
+            <div class="title">密码登录</div>
+        </div>
+        <!--大盒子中部盒子，登录的头像、用户以及密码-->
+        <div class="box-login">
+            <img src="images/avatar.jpg" alt=""><br>
+            <input type="text" placeholder="账号" id="userid"><br>
+            <input type="password" placeholder="密码" id="userpwd"><br>
+            <button id="btn">登录</button>
+        </div>
+        <!--大盒子的底部，注册等其他信息的提示-->
+        <div class="box-bottom">
+                <a class="zhuche">注册账号</a>
+                <a class="qrcode">快捷登录</a>
+                <a>意见反馈</a>
+        </div>
+
+    </div>
+
+
+    <!--大盒子2用来聊天的-->
+    <div class="box2">
+        <div class="box-left">
+            <!--个人信息-->
+            <div class="maininfo">
+                <img src="" alt="" class="myavatar">
+            </div>
+            <!--列表-->
+            <div class="mainlist">
+              <!--用户列表-->
+              <div>用户列表</div>
+              <div class="list" id="list">
+                
+              </div>
+              <!--好友列表-->
+              <div>好友列表</div>
+              <div class="friendlist" id="friendlist">
+    
+              </div>
+              <!--右键菜单1-->
+                <div id="menuadd" class="menuadd">
+                <!-- <div class="menu__add" >添加好友</div> -->
+                </div>
+                <!--右键菜单2-->
+                <div id="menudel" class="menudel">
+                <!-- <div class="menu__del" >删除好友</div> -->
+                </div>
+            </div>
+        </div>
+        <div class="box-right">
+            <!--聊天的对象-->
+            <div class="maintitle">
+                <a id="maintitle">群聊</a>
+            </div>
+            <!--聊天的内容-->
+            <div class="liaotian" id="liaotian">
+                <div class='群聊' maincomment></div>
+            
+            </div>
+            <!-- 聊天的工具栏 -->
+            <div class="maintool">
+                <a href="javascript:;" title="表情" class="face">表情</a>
+                <a href="javascript:;" title="图片" class="file">
+                    <label for="file">图片</label>
+                    <input type="file" id="file" style="display:none;"> 
+                </a>
+                
+                <a href="javascript:;" title="历史记录" id="filehistory">
+                    <label for="filehistory">查看聊天记录</label>
+                </a>
+                <a href="javascript:;" title="历史记录" id="close">
+                <label for="filehistory">关闭聊天记录</label>
+                </a>
+            </div>
+            <!--聊天的发送-->
+            <div class="mainsend">
+                <div name="" id="content" class="text" contenteditable>
+                    
+                </div>
+                <button class="btnsend">发送</button>
+            </div>
+        </div>
+    </div>
+
+    <!--用来扫码登录的-->
+    <div class="box3">
+        <img id="qrcode" alt="" src="/images/李龙华.png">
+        <div>
+        <label for="xuze" class="choose">选择二维码</label>
+        <input type="file" id="xuze" style="display:none;"> 
+        <label class="saomiao">扫描二维码</label>
+        </div><br>
+        <label class="index">返回主界面</label>
+    </div>
+    <!--用来注册的-->
+    <div class="box4">
+        <div>
+            <div>QQ注册</div>
+        </div>
+        <div class="box-zhuche">
+            <img src="images/avatar.jpg" alt=""><br>
+            <label for="fileawatar" class="alterawatar">更改头像</label><br>
+            <input type="file" id="fileawatar" style="display:none;"> 
+            <input type="text" placeholder="昵称" id="nicai"><br>
+            <input type="text" placeholder="账号" id="id"><br>
+            <input type="password" placeholder="密码" id="pwd"><br>
+            <button id="zcbtn">注册</button>
+        </div><br>
+        <label class="index">返回主界面</label>
+    </div>
+
+<!--引入socket.io-->
+<script src="/socket.io/socket.io.js"></script>
+<!--引入jquery-->
+<script src="js/jquery.min.js"></script>
+<!--引入客户端逻辑处理部分-->
+<script src="js/index.js"></script>
+<!--the js for jquery.mCustomScrollbar-->
+<script src="lib/js/jquery.mCustomScrollbar.min.js"></script>
+<!--the js for this plugin-->
+<script src="lib/js/jquery.emoji.js"></script>
+</body>
+</html>
